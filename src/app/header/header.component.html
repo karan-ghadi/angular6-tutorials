@@ -1,0 +1,37 @@
+<nav class="navbar navbar-expand-lg shadow fixed-top">
+    <a class="navbar-brand" routerLink="/">Navbar</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item" routerLinkActive="active">
+                <a class="nav-link" routerLink="/recipes" style="cursor:pointer;">Recipes</a>
+            </li>
+            <li class="nav-item" routerLinkActive="active">
+                <a class="nav-link" routerLink="/shopping-list" style="cursor:pointer;">Shopping List</a>
+            </li>
+            <li class="nav-item dropdown" appDropDown *ngIf="authService.isAuthenticated()">
+                <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="cursor:pointer;">Manage</a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" style="cursor:pointer;" (click)="onSaveData()">Save Data</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" style="cursor:pointer;" (click)="onFetchData()">Fetch Data</a>
+                </div>
+            </li>
+            <li class="nav-item" routerLinkActive="active" *ngIf="authService.isAuthenticated()">
+                <a class="nav-link" (click)="onLogout()" style="cursor:pointer;">Logout</a>
+            </li>
+            <ng-template [ngIf]="!authService.isAuthenticated()">
+                <li class="nav-item" routerLinkActive="active">
+                    <a class="nav-link" routerLink="/login" style="cursor:pointer;">Login</a>
+                </li>
+                <li class="nav-item" routerLinkActive="active">
+                    <a class="nav-link" routerLink="/register" style="cursor:pointer;">Register</a>
+                </li>
+            </ng-template>
+        </ul>
+    </div>
+</nav>

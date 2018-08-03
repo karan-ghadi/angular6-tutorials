@@ -1,0 +1,10 @@
+<div class="card float-left" routerLinkActive="shadow border border-secondary">
+    <a style="cursor:pointer;" [routerLink]="[index]">
+        <img class="card-img-top img-fluid" [src]="recipe.imagePath" alt="{{ recipe.name }}">
+
+        <div class="card-body">
+            <h5 class="card-title">{{ recipe.name | uppercase | slice : '0' : '40' }}..</h5>
+            <p class="card-text">{{ recipe.description | slice : '0' : '100' }}...</p>
+        </div>
+    </a>
+</div>

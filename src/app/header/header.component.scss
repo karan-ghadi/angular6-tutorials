@@ -1,0 +1,15 @@
+.navbar {
+    // background-color: #FF5733;
+    background-color: var(--navBg);
+    ;
+}
+
+.navbar .navbar-nav .nav-link {
+    color: var(--blackColor);
+    opacity: 1;
+}
+
+.navbar .navbar-nav .nav-item.active .nav-link {
+    color: var(--whiteColor);
+    opacity: 1;
+}

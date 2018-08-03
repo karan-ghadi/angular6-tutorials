@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css?family=Ubuntu:300,400,500,700');
+:root {
+    --primaryColor: #3358FF;
+    --successColor: #41BA28;
+    --warningColor: #F07724;
+    --dangerColor: #E72F16;
+    --navBg: #3884F1;
+    --whiteColor: #FFFFFF;
+    --blackColor: #000000;
+    --paraFont: 16px;
+}
+
+body {
+    font-family: 'Ubuntu', 'Arial';
+    color: var(--black);
+    height: 100vh;
+    // background: #F2F2F2;
+    background: #DCE7F7;
+    padding-top: 90px;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.headings {
+    color: var(--primaryColor);
+}
+
+a {
+    font-size: 1em;
+    color: var(--blackColor);
+}
+
+a:hover,
+a:focus,
+a:visited {
+    text-decoration: none;
+    color: var(--primaryColor);
+}
+
+p {
+    font-size: var(--paraFont);
+    line-height: 1.5;
+    margin: 0px;
+    color: var(--blackColor);
+}
+
+a.navbar-brand {
+    color: var(--blackColor);
+}
+
+textarea {
+    resize: none;
+}
+
+.form-control:focus {
+    color: #495057;
+    background-color: var(--whiteColor) !important;
+    border-color: #000;
+    outline: 0;
+    box-shadow: 0 0 0 0rem rgba(0, 123, 255, .25);
+}
+
+.btn {
+    text-transform: uppercase;
+    transition: 0.2s all;
+    &:hover {
+        transition: 0.2s all;
+    }
+}
+
+.btn-primary {
+    background: var(--primaryColor);
+    border-color: var(--primaryColor);
+    color: var(--whiteColor);
+    &:hover,
+    &:disabled {
+        background: var(--primaryColor);
+        border-color: var(--primaryColor);
+        color: var(--whiteColor);
+    }
+}
+
+.btn-success {
+    background: var(--successColor);
+    border-color: var(--successColor);
+    color: var(--whiteColor);
+    &:hover,
+    &:disabled {
+        background: var(--successColor);
+        border-color: var(--successColor);
+        color: var(--whiteColor);
+    }
+}
+
+.btn-warning {
+    background: var(--warningColor);
+    border-color: var(--warningColor);
+    color: var(--whiteColor);
+    &:hover,
+    &:disabled {
+        background: var(--warningColor);
+        border-color: var(--warningColor);
+        color: var(--whiteColor);
+    }
+}
+
+.btn-danger {
+    background: var(--dangerColor);
+    border-color: var(--dangerColor);
+    color: var(--whiteColor);
+    &:hover,
+    &:disabled {
+        background: var(--dangerColor);
+        border-color: var(--dangerColor);
+        color: var(--whiteColor);
+    }
+}
+
+
+/* Error Css*/
+
+input.ng-invalid.ng-touched {
+    border: 1px solid var(--dangerColor) !important;
+}
+
+.text-danger {
+    color: var(--dangerColor) !important;
+}
